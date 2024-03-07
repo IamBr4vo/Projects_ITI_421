@@ -3,12 +3,22 @@ body {
     color: #000000;
 }
 
+.index-body {
+    background-color: #CAE22C;
+}
+
 .card {
-    margin-top: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .card-body {
     background-color: #ffffff;
+}
+
+.card-body-index {
+    background-color: #F3FAB6;
+    color: #005b33;
 }
 
 .background-image {
