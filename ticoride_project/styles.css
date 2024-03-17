@@ -3,22 +3,15 @@ body {
     color: #000000;
 }
 
-.index-body {
-    background-color: #CAE22C;
-}
-
 .card {
     margin-top: 50px;
     margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
     background-color: #ffffff;
-}
-
-.card-body-index {
-    background-color: #F3FAB6;
-    color: #005b33;
 }
 
 .background-image {
@@ -32,5 +25,43 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.4;
+}
+
+.dashboard-body {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navigation {
+    font-size: 16px;
+}
+
+.btn-group {
+    margin-bottom: 20px;
+}
+
+.btn-group .btn {
+    border-radius: 30px;
+}
+
+.btn-group .btn-primary.disabled,
+.btn-group .btn-primary:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.rides-body {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 10px;
 }
