@@ -9,17 +9,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="rides-body">
+<body class="custom-body">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mt-5">
+                    <div class="user-profile">
+                        <a href="settings.html"><span class="">Welcome </span><span class="text-orange">Bravo</span>
+                            <img src="images/user.jpg" alt="User" class="user-image"></a>
+                    </div>
                     <img src="images/car.png" class="img-fluid mx-auto d-block mt-3 mb-4">
                     <div class="card-body">
-                        <div class="btn-group mb-3" role="group" aria-label="Basic example">
+                        <div class="btn-group mb-3">
                             <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
                             <button type="button" class="btn btn-primary active" disabled>Rides</button>
-                            <button type="button" class="btn btn-primary">Settings</button>
+                            <a href="settings.html" class="btn btn-primary">Settings</a>
                         </div>
                         <h2 class="mb-4">Rides</h2>
                         <div class="navigation mt-3">
@@ -42,7 +46,8 @@
                         </div>
                         <div class="mt-3">
                             <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" rows="2" placeholder="Add here the description of the ride"></textarea>
+                            <textarea class="form-control" id="description" rows="2"
+                                placeholder="Add here the description of the ride"></textarea>
                         </div>
                         <hr>
                         <h4>When</h4>
@@ -75,7 +80,7 @@
                         </div>
                         <div class="mt-4">
                             <a href="dashboard.html" class="btn btn-danger">Cancel</a>
-                            <button class="btn btn-success ms-5">Save</button>
+                            <button class="btn btn-success ms-2">Save</button>
                         </div>
                     </div>
                 </div>

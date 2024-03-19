@@ -28,7 +28,7 @@ body {
     opacity: 0.4;
 }
 
-.dashboard-body {
+.custom-body {
     background-color: #f8f9fa;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -52,16 +52,44 @@ body {
     border-color: #6c757d;
 }
 
-.rides-body {
-    background-color: #f8f9fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .form-label {
     font-weight: bold;
 }
 
 .form-control {
     border-radius: 10px;
+}
+
+input[type="text"]:not(#description) {
+    width: 100%;
+    max-width: 300px;
+}
+
+#description {
+    width: 100%;
+    max-width: 760px;
+}
+
+.user-profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px;
+    margin-top: 350px;
+    font-size: 20px;
+}
+
+.user-profile a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-orange {
+    color: #FFA500;
+}
+
+.user-image {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
 }

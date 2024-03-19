@@ -9,71 +9,84 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="dashboard-body">
+<body class="custom-body">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mt-5">
+                    <div class="user-profile">
+                        <a href="settings.html"><span class="">Welcome </span><span class="text-orange">Bravo</span>
+                            <img src="images/user.jpg" alt="User" class="user-image"></a>
+                    </div>
                     <img src="images/car.png" class="img-fluid mx-auto d-block mt-3 mb-4">
                     <div class="card-body">
                         <div class="btn-group mb-3">
                             <button type="button" class="btn btn-primary active" disabled>Dashboard</button>
                             <a href="addRides.html" class="btn btn-primary">Rides</a>
-                            <button type="button" class="btn btn-primary">Settings</button>
+                            <a href="settings.html" class="btn btn-primary">Settings</a>
                         </div>
                         <h2 class="mb-4">Dashboard</h2>
                         <div class="navigation mt-3">
                             <p>Dashboard &gt; </p>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>User</th>
-                                        <th>Start</th>
-                                        <th>End</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>barroyo</td>
-                                        <td>Barrio Los Angeles</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>
-                                            <a href="editRides.html" class="btn btn-primary">Edit</a>
-                                            <button class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>barroyo</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>Los Angeles</td>
-                                        <td>
-                                            <a href="editRides.html" class="btn btn-primary">Edit</a>
-                                            <button class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>yluna</td>
-                                        <td>Ciudad Quesada</td>
-                                        <td>San Pedro</td>
-                                        <td>
-                                            <a href="editRides.html" class="btn btn-primary">Edit</a>
-                                            <button class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="text-end mt-3">
-                            <a href="addRides.html" class="btn btn-success">Add</a>
+                        <h5 class="mb-4">My Rides</h5>
+                        <div class="card mt-2">
+                            <label class="form-label ms-3 my-2">Your currents list of Rides</label>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>User</th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="ride1">
+                                                <td>barroyo</td>
+                                                <td>Barrio Los Angeles</td>
+                                                <td>Ciudad Quesada</td>
+                                                <td>
+                                                    <a href="editRides.html" class="btn btn-primary">Edit</a>
+                                                    <button class="btn btn-danger"
+                                                        onclick="deleteRow('ride1')">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr id="ride2">
+                                                <td>barroyo</td>
+                                                <td>Ciudad Quesada</td>
+                                                <td>Los Angeles</td>
+                                                <td>
+                                                    <a href="editRides.html" class="btn btn-primary">Edit</a>
+                                                    <button class="btn btn-danger"
+                                                        onclick="deleteRow('ride2')">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr id="ride3">
+                                                <td>yluna</td>
+                                                <td>Ciudad Quesada</td>
+                                                <td>San Pedro</td>
+                                                <td>
+                                                    <a href="editRides.html" class="btn btn-primary">Edit</a>
+                                                    <button class="btn btn-danger"
+                                                        onclick="deleteRow('ride3')">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-end mt-3">
+                                    <a href="addRides.html" class="btn btn-success">Add</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>

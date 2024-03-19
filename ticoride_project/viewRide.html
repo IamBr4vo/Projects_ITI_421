@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rides - TicoRides.com</title>
+    <title>Ride Details - TicoRides.com</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,49 +14,37 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mt-5">
-                    <div class="user-profile">
-                        <a href="settings.html"><span class="">Welcome </span><span class="text-orange">Bravo</span>
-                            <img src="images/user.jpg" alt="User" class="user-image"></a>
-                    </div>
                     <img src="images/car.png" class="img-fluid mx-auto d-block mt-3 mb-4">
                     <div class="card-body">
-                        <div class="btn-group mb-3">
-                            <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
-                            <button type="button" class="btn btn-primary active" disabled>Rides</button>
-                            <a href="settings.html" class="btn btn-primary">Settings</a>
-                        </div>
-                        <h2 class="mb-4">Rides</h2>
-                        <div class="navigation mt-3">
-                            <p><a href="dashboard.html">Dashboard</a> &gt; <a href="dashboard.html">Rides</a> &gt; Edit
-                            </p>
-                        </div>
+                        <h2 class="mb-4">Ride Details</h2>
                         <div class="mt-4">
                             <label for="rideName" class="form-label">Ride Name</label>
-                            <input type="text" class="form-control" id="rideName">
+                            <input type="text" class="form-control" id="rideName" value="Ride to San Jose" readonly>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label for="startFrom" class="form-label">Start From</label>
-                                <input type="text" class="form-control" id="startFrom">
+                                <input type="text" class="form-control" id="startFrom" value="Ciudad Quesada" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label for="end" class="form-label">End</label>
-                                <input type="text" class="form-control" id="end">
+                                <input type="text" class="form-control" id="end" value="San Jose" readonly>
                             </div>
                         </div>
                         <div class="mt-3">
                             <label for="description" class="form-label">Description</label>
                             <textarea class="form-control" id="description" rows="2"
-                                placeholder="Add here the description of the ride"></textarea>
+                                readonly>Add here the description of the ride</textarea>
                         </div>
                         <hr>
                         <h4>When</h4>
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label for="departure" class="form-label">Departure</label>
-                                <input type="time" class="form-control" id="departure">
+                                <input type="time" class="form-control" id="departure" value="08:00" readonly>
                                 <label for="arrival" class="form-label">Estimated Arrival</label>
-                                <input type="time" class="form-control form-control-sm" id="arrival">
+                                <input type="time" class="form-control form-control-sm" id="arrival" value="10:00"
+                                    readonly>
                             </div>
                             <div class="col-md-6">
                                 <label for="selectDays" class="form-label">Select Days</label>
@@ -79,8 +67,7 @@
                             </div>
                         </div>
                         <div class="mt-4">
-                            <a href="dashboard.html" class="btn btn-danger">Cancel</a>
-                            <button class="btn btn-success ms-2">Save</button>
+                            <a href="index.html" class="btn btn-primary">Back</a>
                         </div>
                     </div>
                 </div>
