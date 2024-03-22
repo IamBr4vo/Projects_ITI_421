@@ -108,6 +108,5 @@ input[type="text"]:not(#description) {
 /*specific styling for user images, ensuring proper size and margin*/
 .user-image {
     width: 40px;
-    height: self;
     margin-left: 10px;
 }
