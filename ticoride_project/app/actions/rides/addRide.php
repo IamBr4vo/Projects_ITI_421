@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO rides (ride_name, start_from, end_to, description, departure_time, arrival_time, days) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
     if ($stmt->execute([$rideName, $startFrom, $endTo, $description, $departure, $arrival, $days])) {
-        header("Location: ../view/dashboard.php");
+        header("Location: /pages/rides/dashboard.php");
         exit();
     } else {
         echo "Error: Could not execute $sql. " . $pdo->errorInfo();

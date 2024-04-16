@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la consulta
     if ($stmt->execute([$rideName, $startFrom, $endTo, $description, $departure, $arrival, $days, $rideId])) {
-        header("Location: ../view/dashboard.php");
+        header("Location: /pages/rides/dashboard.php");
         exit();
     } else {
         // Manejar errores si la consulta no se ejecuta correctamente

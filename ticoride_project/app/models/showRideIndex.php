@@ -29,18 +29,12 @@ $rides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $ride['start_from']; ?></td>
                             <td><?php echo $ride['end_to']; ?></td>
                             <td>
-                                <!--Pass ride ID to editRides.php -->
-                                <a href="editRides.php?rideId=<?php echo $ride['id']; ?>" class="btn btn-primary">Edit</a>
-                                <!-- Add delete functionality -->
-                                <a href="../functions/deleteRide.php?rideId=<?php echo $ride['id']; ?>" class="btn btn-danger" onclick="confirmDelete()">Delete</a>
+                                <a href="/pages/rides/viewRide.php?rideId=<?php echo $ride['id']; ?>" class="btn btn-primary">View</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
-        </div>
-        <div class="text-end mt-3">
-            <a href="addRides.html" class="btn btn-success">Add</a>
         </div>
     </div>
 </div>

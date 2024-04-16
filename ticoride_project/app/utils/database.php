@@ -1,5 +1,4 @@
 <?php
-
 function get_pdo_connection(){
   $server = "localhost";
   $user = "root";
