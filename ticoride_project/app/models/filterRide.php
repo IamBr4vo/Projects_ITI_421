@@ -11,7 +11,7 @@ if (isset($_POST['fromLocation']) && isset($_POST['toLocation'])) {
 
     if (!empty($fromLocation) || !empty($toLocation)) {
         //If at least one of the fields is not empty, filter on them
-        $sql = "SELECT * FROM rides WHERE start_from = ? AND end_to = ?";
+        $sql = "SELECT * FROM rides WHERE start_from = ? OR end_to = ?";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$fromLocation, $toLocation]);
     } else {

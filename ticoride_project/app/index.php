@@ -13,11 +13,11 @@
         <div class="row mt-4">
             <div class="col-md-6">
                 <label for="fromLocation" class="form-label">From</label>
-                <input type="text" class="form-control" id="fromLocation" name="fromLocation" placeholder="Enter start location" required>
+                <input type="text" class="form-control" id="fromLocation" name="fromLocation" placeholder="Enter start location">
             </div>
             <div class="col-md-6">
                 <label for="toLocation" class="form-label">To</label>
-                <input type="text" class="form-control" id="toLocation" name="toLocation" placeholder="Enter end location" required>
+                <input type="text" class="form-control" id="toLocation" name="toLocation" placeholder="Enter end location">
             </div>
             <div class="col-md-6 mt-4">
                 <button type="submit" class="btn btn-primary btn-block">Find my Ride!</button>

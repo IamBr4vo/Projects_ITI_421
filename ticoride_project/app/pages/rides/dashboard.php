@@ -1,7 +1,13 @@
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/shared/header.php'); ?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/shared/header.php');
+session_start(); ?>
 <title>Dasboard</title>
+<nav class="navbar navbar-light justify-content-end mx-4">
+    <form action="/actions/users/logout.php" method="post">
+        <button type="submit" class="btn btn-outline-danger">Logout</button>
+    </form>
+</nav>
 <div class="user-profile">
-    <a href="/pages/users/settings.php"><span class="">Welcome </span><span class="text-orange">Bravo</span>
+    <a href="/pages/users/settings.php"><span class="">Welcome </span><span class="text-orange"><?php echo $_SESSION['username']; ?></span>
         <img src="/public/img/user.jpg" alt="User" class="user-image"></a>
 </div>
 <img src="/public/img/car.png" alt="Car" class="img-fluid mx-auto d-block mt-3 mb-4">

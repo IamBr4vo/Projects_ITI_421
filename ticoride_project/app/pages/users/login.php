@@ -4,19 +4,19 @@
   <!--logo centered -->
   <img src="/public/img/car.png" alt="Car" class="img-fluid mx-auto d-block mb-4">
   <!--Login form -->
-  <form id="loginForm">
+  <form id="loginForm" action="/actions/users/authenticateLogin.php" method="post">
     <div class="mb-3">
       <label for="username" class="form-label">Name</label>
       <!--Input field for username-->
-      <input class="form-control" id="username" name="username">
+      <input class="form-control" id="username" name="username" required>
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
       <!--Input field for password-->
-      <input class="form-control" id="password" name="password">
+      <input type="password" class="form-control" id="password" name="password" required>
     </div>
     <div class="rich-text">
-      <a class="btn btn-success" href="/pages/rides/dashboard.php">Login</a>
+      <button type="submit" class="btn btn-success">Login</button>
     </div>
   </form>
   <hr>

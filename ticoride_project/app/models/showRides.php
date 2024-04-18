@@ -1,10 +1,20 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/utils/database.php');
 $pdo = get_pdo_connection();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /pages/users/login.php");
+    exit();
+}
+
 // Prepare the SQL query to get all the rides
-$sql = "SELECT * FROM rides";
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM rides WHERE user_id = ? ";
 $stmt = $pdo->prepare($sql);
-$stmt->execute();
+$stmt->execute([$user_id]);
 $rides = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -25,7 +35,7 @@ $rides = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <!--Loop through PHP to generate table rows -->
                     <?php foreach ($rides as $ride) : ?>
                         <tr>
-                            <td><?php echo $ride['ride_name']; ?></td>
+                            <td><?php echo $_SESSION['username']; ?></td>
                             <td><?php echo $ride['start_from']; ?></td>
                             <td><?php echo $ride['end_to']; ?></td>
                             <td>

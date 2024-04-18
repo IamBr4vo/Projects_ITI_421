@@ -9,6 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $departure = $_POST['departure'];
     $arrival = $_POST['arrival'];
 
+    // Obtener el ID del usuario desde la sesión
+    session_start();
+    $userId = $_SESSION['user_id'];
+
     //Concatenate the selected days
     $days = '';
     $daysArray = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
@@ -20,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $days = rtrim($days, ',');
 
     //Prepare the SQL query
-    $sql = "INSERT INTO rides (ride_name, start_from, end_to, description, departure_time, arrival_time, days) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO rides (ride_name, start_from, end_to, description, departure_time, arrival_time, days, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    if ($stmt->execute([$rideName, $startFrom, $endTo, $description, $departure, $arrival, $days])) {
+    if ($stmt->execute([$rideName, $startFrom, $endTo, $description, $departure, $arrival, $days, $userId])) {
         header("Location: /pages/rides/dashboard.php");
         exit();
     } else {
