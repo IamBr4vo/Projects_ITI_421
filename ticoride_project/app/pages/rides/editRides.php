@@ -20,7 +20,7 @@ session_start() ?>
     <h2 class="mb-4">Edit Ride</h2>
     <!--Include the PHP file to get ride information -->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/models/getInfoRide.php'); ?>
-    <form action="/actions/rides/updateRide.php" method="post">
+    <form id="rideForm" action="/actions/rides/updateRide.php" method="post">
         <div class="mt-4">
             <label for="rideName" class="form-label">Ride Name</label>
             <input type="text" class="form-control" id="rideName" name="rideName" value="<?php echo htmlspecialchars($rideName); ?>">
@@ -76,6 +76,7 @@ session_start() ?>
         </div>
     </form>
 </div>
+<script src="/public/js/validationRide.js"></script>
 </body>
 
 </html>

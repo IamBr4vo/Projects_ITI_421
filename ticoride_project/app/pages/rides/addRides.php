@@ -12,7 +12,7 @@ session_start() ?>
 </div>
 <img src="/public/img/car.png" alt="Car" class="img-fluid mx-auto d-block mt-3 mb-4">
 <div class="card-body">
-    <form action="/actions/rides/addRide.php" method="post">
+    <form id="rideForm" action="/actions/rides/addRide.php" method="post">
         <div class="btn-group mb-3">
             <a href="dashboard.php" class="btn btn-primary">Dashboard</a>
             <button type="button" class="btn btn-primary active" disabled>Rides</button>
@@ -84,6 +84,7 @@ session_start() ?>
         </div>
     </form>
 </div>
+<script src="/public/js/validationRide.js"></script>
 </body>
 
 </html>

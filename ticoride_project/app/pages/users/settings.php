@@ -21,7 +21,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/models/getSettingsData.php');
         <p><a href="/pages/rides/dashboard.php">Dashboard</a> &gt; Settings</p>
     </div>
     <!--form fields for user settings like name and average speed-->
-    <form action="/actions/users/updateSettingsData.php" method="post">
+    <form id="settingsForm" action="/actions/users/updateSettingsData.php" method="post">
         <div class="mb-3">
             <label for="fullName" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="fullName" name="fullName" value="<?= htmlspecialchars($user_settings['full_name']) ?>">
@@ -41,6 +41,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/models/getSettingsData.php');
         </div>
     </form>
 </div>
+<script src="/public/js/validationSettings.js"></script>
 </body>
 
 </html>
