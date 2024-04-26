@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit rides</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="custom-body">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mt-5">
+                    <div class="user-profile">
+                        <a href="settings.html"><span class="">Welcome </span><span class="text-orange">Bravo</span>
+                            <img src="images/user.jpg" alt="User" class="user-image"></a>
+                    </div>
+                    <img src="images/car.png" alt="Car" class="img-fluid mx-auto d-block mt-3 mb-4">
+                    <div class="card-body">
+                        <div class="btn-group mb-3">
+                            <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+                            <button type="button" class="btn btn-primary active" disabled>Rides</button>
+                            <a href="settings.html" class="btn btn-primary">Settings</a>
+                        </div>
+                        <h2 class="mb-4">Rides</h2>
+                        <!--breadcrumb navigation -->
+                        <div class="navigation mt-3">
+                            <p><a href="dashboard.html">Dashboard</a> &gt; <a href="dashboard.html">Rides</a> &gt; Edit
+                            </p>
+                        </div>
+                        <!--Form fields for adding a new ride -->
+                        <div class="mt-4">
+                            <label for="rideName" class="form-label">Ride Name</label>
+                            <input type="text" class="form-control" id="rideName">
+                        </div>
+                        <!--location inputs for the ride's start and end points -->
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="startFrom" class="form-label">Start From</label>
+                                <input type="text" class="form-control" id="startFrom">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="end" class="form-label">End</label>
+                                <input type="text" class="form-control" id="end">
+                            </div>
+                        </div>
+                        <!--textarea for additional ride description -->
+                        <div class="mt-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="2"
+                                placeholder="Add here the description of the ride"></textarea>
+                        </div>
+                        <hr>
+                        <!--time input for departure and estimated arrival-->
+                        <h4>When</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="departure" class="form-label">Departure</label>
+                                <input type="time" class="form-control" id="departure">
+                                <label for="arrival" class="form-label">Estimated Arrival</label>
+                                <input type="time" class="form-control form-control-sm" id="arrival">
+                            </div>
+                            <!--checkbox options for selecting ride days -->
+                            <div class="col-md-6">
+                                <label class="form-label">Select Days</label>
+                                <div>
+                                     <!--each day of the week can be selected individually-->
+                                    <input type="checkbox" id="monday" name="day" value="Monday">
+                                    <label for="monday">Monday</label><br>
+                                    <input type="checkbox" id="tuesday" name="day" value="Tuesday">
+                                    <label for="tuesday">Tuesday</label><br>
+                                    <input type="checkbox" id="wednesday" name="day" value="Wednesday">
+                                    <label for="wednesday">Wednesday</label><br>
+                                    <input type="checkbox" id="thursday" name="day" value="Thursday">
+                                    <label for="thursday">Thursday</label><br>
+                                    <input type="checkbox" id="friday" name="day" value="Friday">
+                                    <label for="friday">Friday</label><br>
+                                    <input type="checkbox" id="saturday" name="day" value="Saturday">
+                                    <label for="saturday">Saturday</label><br>
+                                    <input type="checkbox" id="sunday" name="day" value="Sunday">
+                                    <label for="sunday">Sunday</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Action buttons for saving or canceling the ride edition-->
+                        <div class="mt-4">
+                            <a href="dashboard.html" class="btn btn-danger">Cancel</a>
+                            <button class="btn btn-success ms-2">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
